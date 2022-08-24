@@ -35,7 +35,7 @@ var VideoFrame = function(options) {
 	if (this === window) { return new VideoFrame(options); }
 	this.obj = options || {};
 	this.frameRate = this.obj.frameRate || 24;
-	this.video = document.getElementById(this.obj.id) || document.getElementsByTagName('video')[0];
+	this.video = this.obj.video || document.getElementById(this.obj.id) || document.getElementsByTagName('video')[0];
 };
 
 /**
